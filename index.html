@@ -23,10 +23,25 @@
     }
   </script>
   <style>
-    body { font-family: 'DM Sans', system-ui, sans-serif; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background-image: url('https://billscloudlabwebsite.s3.us-east-2.amazonaws.com/tech.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(250, 250, 250, 0.88);
+      z-index: 0;
+      pointer-events: none;
+    }
+    body > * { position: relative; z-index: 1; }
   </style>
 </head>
-<body class="bg-zinc-50 text-zinc-900 font-sans antialiased min-h-screen">
+<body class="text-zinc-900 font-sans antialiased min-h-screen">
   <!-- Sticky Navigation -->
   <header class="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/90 backdrop-blur-md">
     <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
@@ -118,7 +133,7 @@
           </svg>
           will3benn@gmail.com
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-3 text-zinc-700 transition hover:border-accent hover:text-accent">
+        <a href="https://linkedin.com/in/bill-bennett-5767151a9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-3 text-zinc-700 transition hover:border-accent hover:text-accent">
           LinkedIn
         </a>
       </div>
